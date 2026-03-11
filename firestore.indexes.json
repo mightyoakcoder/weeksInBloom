@@ -1,0 +1,21 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "watering_logs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "plantId", "order": "ASCENDING" },
+        { "fieldPath": "wateredAt", "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "harvest_logs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "plantId", "order": "ASCENDING" },
+        { "fieldPath": "harvestedAt", "order": "DESCENDING" }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}

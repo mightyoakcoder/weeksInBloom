@@ -1,0 +1,78 @@
+// Pre-populated seed data based on the user's actual seed list
+// Used to pre-fill the "Add Plant" form
+
+export const SEED_CATALOG = [
+  // Vegetables
+  { name: 'Cherry Tomato', variety: 'Red Cherry Large Fruited', type: 'vegetable', icon: '🍅',
+    indoorStart: 'Mar 15–25', transplant: 'Late May', location: 'Full sun, 8+ hrs',
+    wateringFrequency: 3, harvestUnit: 'count', notes: 'Stake early. Water deeply and consistently.' },
+  { name: 'Pepper', variety: 'Jupiter (Spanish)', type: 'vegetable', icon: '🫑',
+    indoorStart: 'Mar 9–15', transplant: 'Early June', location: 'Full sun, west bed ok',
+    wateringFrequency: 3, harvestUnit: 'count', notes: 'Use heat mat for germination. Start NOW.' },
+  { name: 'Lettuce', variety: 'Iceberg', type: 'vegetable', icon: '🥬',
+    indoorStart: 'Mar 15–Apr 15', transplant: 'Apr 15–May 1', location: 'West bed — tolerates afternoon shade',
+    wateringFrequency: 2, harvestUnit: 'head', notes: 'Frost tolerant. Harvest by late June before bolting.' },
+  { name: 'Lettuce', variety: 'Parris Island Cos (Romaine)', type: 'vegetable', icon: '🥬',
+    indoorStart: 'Mar 15–Apr 15', transplant: 'Apr 15–May 1', location: 'West bed — tolerates afternoon shade',
+    wateringFrequency: 2, harvestUnit: 'head', notes: 'Heirloom variety. Succession sow every 2–3 weeks.' },
+  { name: 'Beet', variety: 'Detroit Dark Red', type: 'vegetable', icon: '🟣',
+    indoorStart: null, transplant: null, location: 'Sunny spot, loose deep soil',
+    directSow: 'Apr 15–May 1', wateringFrequency: 3, harvestUnit: 'count',
+    notes: 'Direct sow only — hates transplanting. Soak seeds overnight. Thin to 3–4".' },
+  { name: 'Zucchini', variety: 'Dark Green', type: 'vegetable', icon: '🥒',
+    indoorStart: null, transplant: null, location: 'Full sun, needs 3–4 ft space',
+    directSow: 'May 25–Jun 1', wateringFrequency: 3, harvestUnit: 'count',
+    notes: 'Direct sow. 1–2 plants is plenty. Harvest small for best flavor.' },
+  { name: 'Cucumber', variety: 'Straight Eight', type: 'vegetable', icon: '🥒',
+    indoorStart: null, transplant: null, location: 'Full sun, trellis recommended',
+    directSow: 'May 25–Jun 1', wateringFrequency: 3, harvestUnit: 'count',
+    notes: 'Direct sow. Trellis saves space. Consistent moisture = straight fruit.' },
+
+  // Flowers
+  { name: 'Zinnia', variety: 'Giant Cactus Flowered', type: 'flower', icon: '🌺',
+    indoorStart: 'Apr 15–30', transplant: 'Late May', location: 'Front west bed — back/north end',
+    wateringFrequency: 5, harvestUnit: 'bunch', notes: 'Deadhead regularly. Up to 3 ft tall.' },
+  { name: 'Zinnia', variety: 'Semi-Dwarf Pumila', type: 'flower', icon: '🌺',
+    indoorStart: 'Apr 15–30', transplant: 'Late May', location: 'Front west bed',
+    wateringFrequency: 5, harvestUnit: 'bunch', notes: 'Compact. Deadhead for continuous blooms.' },
+  { name: 'Nasturtium', variety: 'Alaska', type: 'flower', icon: '🍊',
+    indoorStart: null, transplant: null, location: 'Front bed edges',
+    directSow: 'May 10–25', wateringFrequency: 7, harvestUnit: 'bunch',
+    notes: 'Direct sow only. Edible flowers. Natural aphid repellent. Poor soil = more blooms.' },
+  { name: 'Cosmos', variety: 'Sensation Mixed', type: 'flower', icon: '🌸',
+    indoorStart: 'Apr 15–30', transplant: 'Late May', location: 'Front bed, middle to back',
+    directSow: 'May 25', wateringFrequency: 7, harvestUnit: 'bunch',
+    notes: 'Tall (3–4 ft). Don\'t over-fertilize. Self-seeds if allowed.' },
+  { name: 'California Poppy', variety: 'Extra Golden', type: 'flower', icon: '🌕',
+    indoorStart: null, transplant: null, location: 'Front bed, fill gaps',
+    directSow: 'Apr 1–15', wateringFrequency: 7, harvestUnit: 'bunch',
+    notes: 'Direct sow only. Needs light to germinate — don\'t cover seeds. Self-seeds next year.' },
+  { name: 'African Daisy', variety: 'Mixed Colors', type: 'flower', icon: '🌼',
+    indoorStart: 'Mar 20–Apr 1', transplant: 'May 15–25', location: 'Front west bed',
+    wateringFrequency: 5, harvestUnit: 'bunch', notes: 'Closes at night — totally normal.' },
+  { name: 'Bachelor Button', variety: 'Blue Boy', type: 'flower', icon: '💙',
+    indoorStart: null, transplant: null, location: 'Front bed edges',
+    directSow: 'Apr 1–20', wateringFrequency: 7, harvestUnit: 'bunch',
+    notes: 'Very frost-hardy. Succession sow every 2–3 weeks. Deadhead for longer bloom.' },
+];
+
+export const PLANT_STATUSES = [
+  { value: 'planned',   label: 'Planned',     badge: 'badge-seed' },
+  { value: 'seeded',    label: 'Seeds Started', badge: 'badge-seed' },
+  { value: 'sprouted',  label: 'Sprouted',    badge: 'badge-sprouted' },
+  { value: 'indoor',    label: 'Growing Indoors', badge: 'badge-indoor' },
+  { value: 'hardening', label: 'Hardening Off', badge: 'badge-indoor' },
+  { value: 'outdoor',   label: 'Outdoors',    badge: 'badge-outdoor' },
+  { value: 'harvesting',label: 'Harvesting',  badge: 'badge-harvest' },
+  { value: 'done',      label: 'Season Done', badge: 'badge-done' },
+];
+
+export const LOCATIONS = [
+  'Front West Bed (Left)',
+  'Front West Bed (Right)',
+  'Back Garden',
+  'Raised Bed',
+  'Container',
+  'Indoor Tray',
+  'Other',
+];
