@@ -1,20 +1,30 @@
-# 🌱 Weeks in Bloom
+# Weeks in Bloom
 
-A full-stack garden tracking app built with React + Vite (frontend), Node.js/Express (backend), Firestore (database), and Cloud Storage (photos). Deployable to Cloud Run.
+![Weeks in Bloom](frontend/src/weeksinbloomimg.png)
 
-Pre-loaded with your 2026 seed list for Attleboro, MA (Zone 6a).
+A personal garden planning and tracking app — built as part of my development portfolio to solve a real problem: I had a growing list of seeds I wanted to plant this spring and no good way to manage all of it.
+
+Weeks in Bloom turns that seed list into a full garden management system. Log when and where each seed is planted, track watering schedules, record harvests, and get a weekly to-do list so nothing falls through the cracks.
 
 ---
 
-## Features
+## About This Project
 
-- **Plant tracker** — add plants with status, location, seeded/germinated/transplanted dates
-- **Seed catalog quick-fill** — search your pre-loaded seed list to auto-fill forms
-- **Watering log** — log each watering event, see who's overdue with visual progress bars
-- **Harvest log** — track quantity + unit, view season summaries per plant
-- **Schedule view** — Gantt-style calendar showing indoor start → transplant → harvest for every plant
-- **Dashboard** — overdue watering alerts, recent activity feed, week's to-do list
-- **Photo uploads** — store plant photos in Cloud Storage
+This is one of several projects in my portfolio demonstrating full-stack development with modern tooling. Weeks in Bloom is intentionally personal — it's pre-loaded with my actual 2026 seed list for Attleboro, MA (Zone 6a) — but the architecture is generalizable to any tracking/logging application.
+
+**Stack:** React + Vite · Node.js/Express · Firestore · Google Cloud Storage · Cloud Run
+
+---
+
+## What It Does
+
+- **Seed catalog** — pre-loaded with this spring's seeds, searchable for quick-fill when logging new plants
+- **Plant tracker** — log each plant with status, location, and key dates (seeded, germinated, transplanted)
+- **Watering log** — record every watering event; visual progress bars show who's overdue at a glance
+- **Harvest log** — track quantity and unit per harvest, with per-plant season summaries
+- **Schedule view** — Gantt-style calendar showing the full arc from indoor start through transplant to harvest
+- **Dashboard** — overdue watering alerts, recent activity feed, and a weekly to-do list
+- **Photo uploads** — attach photos to plants, stored in Cloud Storage
 
 ---
 
@@ -74,20 +84,14 @@ The Vite dev server proxies `/api` calls to `localhost:8080` automatically.
 ## Deploy to Cloud Run
 
 ```bash
-# Set your project
 export GOOGLE_CLOUD_PROJECT="your-project-id"
-
-# Make script executable and run
 chmod +x deploy.sh
 ./deploy.sh
 ```
 
-The script will:
-1. Build the Docker image via Cloud Build
-2. Create the Cloud Storage bucket
-3. Deploy to Cloud Run (no auth required — add IAP if you want auth)
+The script builds the Docker image via Cloud Build, creates the Cloud Storage bucket, and deploys to Cloud Run.
 
-### Manual gcloud deploy (alternative)
+### Manual deploy
 
 ```bash
 gcloud builds submit --tag gcr.io/YOUR_PROJECT/weeks-in-bloom .
@@ -123,6 +127,6 @@ gcloud run deploy weeks-in-bloom \
 
 ---
 
-## Customizing Your Seed List
+## Customizing the Seed List
 
-Edit `frontend/src/lib/seeds.js` to update the pre-populated seed catalog, watering frequencies, locations, and harvest units.
+Edit [frontend/src/lib/seeds.js](frontend/src/lib/seeds.js) to swap in your own seed catalog, watering frequencies, locations, and harvest units.
