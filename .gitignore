@@ -4,3 +4,4 @@ dist/
 .env.local
 *.key.json
 backend/public/
+.DS_Store
